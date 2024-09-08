@@ -13,6 +13,76 @@
                     <div class="card-header">
                         <h3 class="card-title">{{page_title}}</h3>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+                    <div class="card-body">
+                        <div>
+                            <label>Certifications:</label>
+    
+                            <select>
+                  <option value="" selected>---------</option>
+                  <option value="1">Research Paper</option>
+                  <option value="2">Faculty Development Program (Organized)</option>
+                  <option value="3">Faculty Development Program (Attended)</option>
+                  <option value="4"></option>
+                  <option value="5"></option>
+                </select>
+                 </div>
+    
+    
+               <br>
+    
+            <div >
+                <label >Upload Files:</label>
+                <input type="file"accept="image/*" class="form-control">
+            </div>
+    
+    
+    
+            <br>
+    
+            <div >
+                <label >Details:</label>
+                <textarea cols="40" rows="5" class="form-control"></textarea>
+            </div>
+           
+        </div>
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     {% include "main_app/form_template.html" with messages=messages  form=form button_text="Update Staff"%}
                 </div>
                 <!-- /.card -->

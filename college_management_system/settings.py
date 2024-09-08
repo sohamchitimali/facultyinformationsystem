@@ -84,8 +84,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'college_management_system.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
@@ -103,8 +102,7 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
+
 if not DEBUG:
     AUTH_PASSWORD_VALIDATORS = []
 else:
@@ -124,8 +122,7 @@ else:
     ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.1/topics/i18n/
+
 
 LANGUAGE_CODE = 'en-us'
 
@@ -138,8 +135,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
+
 
 STATIC_URL = '/static/'
 
@@ -151,8 +147,7 @@ AUTH_USER_MODEL = 'main_app.CustomUser'
 AUTHENTICATION_BACKENDS = ['main_app.EmailBackend.EmailBackend']
 TIME_ZONE = 'Asia/Kolkata'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-# EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_mails")
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -161,7 +156,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get('majidgt786@gmail.com') 
 EMAIL_HOST_PASSWORD = os.environ.get('sshswdwuwaokhghd')
 EMAIL_USE_TLS = True
-# DEFAULT_FROM_EMAIL = "School Management System <admin@admin.com>"
+
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

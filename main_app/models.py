@@ -220,4 +220,4 @@ def save_user_profile(sender, instance, **kwargs):
     if instance.user_type == 3:
         instance.student.save()
 
-# todos
+

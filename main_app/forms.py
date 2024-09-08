@@ -8,7 +8,7 @@ from . import models
 class FormSettings(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(FormSettings, self).__init__(*args, **kwargs)
-        # Here make some changes such as:
+       
         for field in self.visible_fields():
             field.field.widget.attrs['class'] = 'form-control'
 
@@ -24,6 +24,7 @@ class CustomUserForm(FormSettings):
         'password': forms.PasswordInput(),
     }
     profile_pic = forms.ImageField()
+
 
     def __init__(self, *args, **kwargs):
         super(CustomUserForm, self).__init__(*args, **kwargs)
@@ -190,14 +191,6 @@ class EditResultForm(FormSettings):
     class Meta:
         model = StudentResult
         fields = ['session_year', 'subject', 'student', 'test', 'exam']
-
-#todos
-# class TodoForm(forms.ModelForm):
-#     class Meta:
-#         model=Todo
-#         fields=["title","is_finished"]
-
-#issue book
 
 class IssueBookForm(forms.Form):
     isbn2 = forms.ModelChoiceField(queryset=models.Book.objects.all(), empty_label="Book Name [ISBN]", to_field_name="isbn", label="Book (Name and ISBN)")
